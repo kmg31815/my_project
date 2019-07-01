@@ -22,7 +22,12 @@ $(function(){
         change: onChange
 
     });
-    $("#bought_datepicker").kendoDatePicker();
+
+    //日期
+    $("#bought_datepicker").kendoDatePicker({
+        value: new Date(),
+        format:  "yyyy-MM-dd"
+    });
 
     $("#book_grid").kendoGrid({
         dataSource: {
@@ -99,8 +104,9 @@ function deleteBook(e){
 }
 
 //新增
-$("#add_book").click(function(e){
+$("#add").click(function(e){
     const book = {
+        //BookId 要再改
         "BookId" : bookDataFromLocalStorage[bookDataFromLocalStorage.length - 1].BookId + 1,
         "BookName" : $("#book_name").val(),
         "BookCategory" : $("#book_category").data("kendoDropDownList").text(),
@@ -115,18 +121,18 @@ $("#add_book").click(function(e){
     localStorage.setItem("bookData",JSON.stringify(bookDataFromLocalStorage));
     $("#book_grid").data("kendoGrid").dataSource.data(bookDataFromLocalStorage);
 
-    $("#window").data("kendoWindow").close();
+    $("#InsertWindow").data("kendoWindow").close();
 
     //欄位清空
-    $("#book_name").value("");
-    $("#book_author").value("");
+    $("#book_name").val("");
+    $("#book_author").val("");
     //$("#book_publisher").value("");
 });
 
 //彈出視窗
 $(document).ready(function() {
-    var myWindow = $("#window"),
-        add = $("#add");
+    var myWindow = $("#InsertWindow"),
+        add = $("#add_book");
 
     add.click(function() {
         myWindow.kendoWindow({
