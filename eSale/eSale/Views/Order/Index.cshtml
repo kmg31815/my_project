@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Index", "Order"))
+{
+<table>
+    <tr>
+        <td>訂單編號</td>
+        <td>
+            <input type="text" id="txtOrderNo" name="txtOrderNo"/>
+        </td>
+    </tr>
+
+    <tr>
+        <td>負責業務</td>
+        <td>
+            <input type="text" id="txtEmpId" name="txtEmpId"/>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="submit" value="查詢"/>
+        </td>
+        <td></td>
+    </tr>
+</table>
+}
