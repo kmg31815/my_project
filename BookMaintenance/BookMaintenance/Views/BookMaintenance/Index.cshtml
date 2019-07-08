@@ -1,0 +1,118 @@
+﻿@model BookMaintenance.Models.BooksSearchArg
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>圖書維護</h2>
+
+@using (Html.BeginForm("Index", "BookMaintenance", FormMethod.Post, new { id = "Form1" }))
+{
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(model => model.BookName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.BookName, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BookClassName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.BookClassName, (List<SelectListItem>)ViewBag.BookClassNameData, "請選擇", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.BookClassName, "", new { @class = "form-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.UserName, (List<SelectListItem>)ViewBag.UserNameData, "請選擇", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "form-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CodeName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.CodeName, (List<SelectListItem>)ViewBag.CodeNameData, "請選擇", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CodeName, "", new { @class = "form-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-10">
+                <input type="submit" value="查詢" class="btn" style="background-color: #99b2db; color:#194284" />
+                <input type="button" value="清除" onclick="location.href='@Url.Action("Index", "BookMaintenance")'" class="btn" style="background-color: #99b2db; color:#194284" />
+                <input type="button" value="新增" onclick="location.href='@Url.Action("InsertBook", "BookMaintenance")'" class="btn" style="background-color: #99b2db; color:#194284" />
+            </div>
+        </div>
+    </div>
+
+    if(ViewBag.SearchResult != null)
+    {
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>圖書類別</th>
+                    <th>書名</th>
+                    <th>購書日期</th>
+                    <th>借閱狀態</th>
+                    <th>借閱人</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in (List<BookMaintenance.Models.Books>)ViewBag.SearchResult)
+                {
+                    <tr id='@item.BookID'>
+                        <td>@item.BookClassName</td>
+                        <td>@Html.ActionLink(@item.BookName == "" ? "無書名 建議刪除" : @item.BookName, "BookData", new { BookID = @item.BookID }, new { @style = "color:#194284;" })</td>
+                        <td>@item.BookBoughtDate.Replace('-', '/')</td>
+                        <td>@item.CodeName</td>
+                        <td>@item.UserName</td>
+                        <td><input type="button" value="借閱紀錄" class="btn" style="background-color: #99b2db; color:#194284" onclick="location.href='@Url.Action("BookLendRecord", "BookMaintenance",new { BookID = @item.BookID})'" /></td>
+                        <td><input type="button" value="修改" class="btn" style="background-color: #99b2db; color:#194284" onclick="location.href='@Url.Action("UpdateBook", "BookMaintenance",new { BookID = @item.BookID})'" /></td>
+                        <td>
+                            <input type="button" value="刪除" class="btnDelete btn" href="#" style="background-color: #99b2db; color:#194284" />
+                            <input class="hidBookID" type="hidden" value='@item.BookID' />
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".btnDelete").click(function (e) {
+            var Check = confirm('確定是否刪除這筆紀錄?');
+            if (Check == true) {
+                e.preventDefault();
+                var tr = $(this).closest('tr')
+                console.log(tr);
+                $.ajax({
+                    type: "POST",
+                    url: "/BookMaintenance/DeleteBook",
+                    data: "BookID=" + $(this).next().val(),
+                    dataType: "json",
+                    success: function (response) {
+                        if (response == true) {
+                            $(tr).remove();
+                            alert("圖書已刪除");
+                        }
+                    },
+                    error: function (error) {
+                        alert("系統發生錯誤");
+                    }
+                });
+            }
+        });
+    });
+</script>
+
+

@@ -1,0 +1,106 @@
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\csc.exe
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\csc.exe.config
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\csc.rsp
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\csi.exe
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\csi.rsp
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\System.AppContext.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\System.Collections.Immutable.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\System.Diagnostics.StackTrace.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\System.IO.FileSystem.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\System.IO.FileSystem.Primitives.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\vbc.exe
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\vbc.exe.config
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\vbc.rsp
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\VBCSCompiler.exe
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\roslyn\VBCSCompiler.exe.config
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\BookMaintenance.dll.config
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\BookMaintenance.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\BookMaintenance.pdb
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\Microsoft.Web.Infrastructure.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\System.Web.Helpers.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\System.Web.Mvc.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\System.Web.Razor.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\System.Web.Webpages.Deployment.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\System.Web.Webpages.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\System.Web.Webpages.Razor.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\System.Web.Razor.xml
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\System.Web.Webpages.xml
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\System.Web.Webpages.Deployment.xml
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\System.Web.Webpages.Razor.xml
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\System.Web.Helpers.xml
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\System.Web.Mvc.xml
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\zh-Hant\System.Web.Razor.resources.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\zh-Hant\System.Web.Webpages.resources.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\zh-Hant\System.Web.Webpages.Deployment.resources.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\zh-Hant\System.Web.Webpages.Razor.resources.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\zh-Hant\System.Web.Helpers.resources.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\bin\zh-Hant\System.Web.Mvc.resources.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\obj\Debug\BookMaintenance.csprojResolveAssemblyReference.cache
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\obj\Debug\BookMaintenance.dll
+c:\users\nt2018\documents\visual studio 2017\Projects\BookMaintenance\BookMaintenance\obj\Debug\BookMaintenance.pdb
+D:\project\BookMaintenance\BookMaintenance\obj\Debug\BookMaintenance.csprojResolveAssemblyReference.cache
+D:\project\BookMaintenance\BookMaintenance\obj\Debug\BookMaintenance.dll
+D:\project\BookMaintenance\BookMaintenance\obj\Debug\BookMaintenance.pdb
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\csc.exe
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\csc.exe.config
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\csc.rsp
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\csi.exe
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\csi.rsp
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\System.AppContext.dll
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\System.Collections.Immutable.dll
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\System.IO.FileSystem.dll
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\System.Reflection.Metadata.dll
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\vbc.exe
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\vbc.exe.config
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\vbc.rsp
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\VBCSCompiler.exe
+D:\project\BookMaintenance\BookMaintenance\bin\roslyn\VBCSCompiler.exe.config
+D:\project\BookMaintenance\BookMaintenance\bin\BookMaintenance.dll.config
+D:\project\BookMaintenance\BookMaintenance\bin\BookMaintenance.dll
+D:\project\BookMaintenance\BookMaintenance\bin\BookMaintenance.pdb
+D:\project\BookMaintenance\BookMaintenance\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\project\BookMaintenance\BookMaintenance\bin\Microsoft.Web.Infrastructure.dll
+D:\project\BookMaintenance\BookMaintenance\bin\System.Web.Helpers.dll
+D:\project\BookMaintenance\BookMaintenance\bin\System.Web.Mvc.dll
+D:\project\BookMaintenance\BookMaintenance\bin\System.Web.Razor.dll
+D:\project\BookMaintenance\BookMaintenance\bin\System.Web.Webpages.Deployment.dll
+D:\project\BookMaintenance\BookMaintenance\bin\System.Web.Webpages.dll
+D:\project\BookMaintenance\BookMaintenance\bin\System.Web.Webpages.Razor.dll
+D:\project\BookMaintenance\BookMaintenance\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\project\BookMaintenance\BookMaintenance\bin\System.Web.Razor.xml
+D:\project\BookMaintenance\BookMaintenance\bin\System.Web.Webpages.xml
+D:\project\BookMaintenance\BookMaintenance\bin\System.Web.Webpages.Deployment.xml
+D:\project\BookMaintenance\BookMaintenance\bin\System.Web.Webpages.Razor.xml
+D:\project\BookMaintenance\BookMaintenance\bin\System.Web.Helpers.xml
+D:\project\BookMaintenance\BookMaintenance\bin\System.Web.Mvc.xml
+D:\project\BookMaintenance\BookMaintenance\bin\zh-Hant\System.Web.Razor.resources.dll
+D:\project\BookMaintenance\BookMaintenance\bin\zh-Hant\System.Web.Webpages.resources.dll
+D:\project\BookMaintenance\BookMaintenance\bin\zh-Hant\System.Web.Webpages.Deployment.resources.dll
+D:\project\BookMaintenance\BookMaintenance\bin\zh-Hant\System.Web.Webpages.Razor.resources.dll
+D:\project\BookMaintenance\BookMaintenance\bin\zh-Hant\System.Web.Helpers.resources.dll
+D:\project\BookMaintenance\BookMaintenance\bin\zh-Hant\System.Web.Mvc.resources.dll

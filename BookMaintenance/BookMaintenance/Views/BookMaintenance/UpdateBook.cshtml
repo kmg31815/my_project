@@ -1,0 +1,159 @@
+﻿@model BookMaintenance.Models.Books
+
+@{
+    ViewBag.Title = "UpdateBook";
+}
+
+<h2>修改圖書</h2>
+
+@using (Html.BeginForm("UpdateBook", "BookMaintenance", FormMethod.Post, new { id = "UpdateBookForm" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.BookID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BookName, htmlAttributes: new { @class = "control-label col-md-2 required" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.BookName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.BookName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BookAuthor, htmlAttributes: new { @class = "control-label col-md-2 required" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.BookAuthor, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.BookAuthor, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BookPublisher, htmlAttributes: new { @class = "control-label col-md-2 required" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.BookPublisher, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.BookPublisher, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BookNote, htmlAttributes: new { @class = "control-label col-md-2 required" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.BookNote, 10, 10, new { @class = "form-control", @id = "TextArea", @onkeyup = "WordsDeal();" })
+                @Html.ValidationMessageFor(model => model.BookNote, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BookBoughtDate, htmlAttributes: new { @class = "control-label col-md-2 required" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.BookBoughtDate, new { @class = "form-control", @type = "Date", @id = "DatePicker" })
+                @Html.ValidationMessageFor(model => model.BookBoughtDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BookClassName, htmlAttributes: new { @class = "control-label col-md-2 required" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.BookClassID, (List<SelectListItem>)ViewBag.BookClassNameData, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.BookClassID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CodeName, htmlAttributes: new { @class = "control-label col-md-2 required" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.CodeName, (List<SelectListItem>)ViewBag.CodeNameData, new { @class = "form-control ", @id = "CodeNameDropDown" })
+                @Html.ValidationMessageFor(model => model.CodeName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.UserName, (List<SelectListItem>)ViewBag.UserNameData, "請選擇", new { @class = "form-control", @id = "UserNameDropDown" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn" value="存檔" style="background-color: #99b2db; color:#194284" />
+                <input type="button" class="btn" id="delete" value="刪除" href="#" style="background-color: #99b2db; color:#194284">
+                <input class="hidBookID" type="hidden" value='@Model.BookID' />
+            </div>
+        </div>
+    </div>
+}
+<div>
+    @*返回上一頁*@
+    <input type="button" value="返回" class="btn" style="background-color: #99b2db; color:#194284" onclick="history.back()" />
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#delete").click(function (e) {
+            var Check = confirm('確定是否刪除這筆紀錄?');
+            if (Check == true) {
+                e.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "/BookMaintenance/DeleteBook",
+                    data: "BookID=" + $(this).next().val(),
+                    dataType: "json",
+                    success: function (response) {
+                        if (response == true) {
+                            alert("圖書已刪除");
+                            location.href = '@Url.Action("Index", "BookMaintenance")'
+                        }
+                        else {
+                            alert("圖書已借出");
+                        }
+                    },
+                    error: function (error) {
+                        alert("系統發生錯誤");
+                    }
+                });
+            }
+        });
+
+        $("#UpdateBookForm").on("submit", function () {
+            return confirm('確定是否修改這筆紀錄?');
+        });
+
+        //下拉式選單控制(可借閱時不可填借閱人)
+        var Check = $("#CodeNameDropDown").val();
+        if (Check == "A" || Check == "U") {
+            $("#UserNameDropDown").attr("disabled", true);
+        }
+        else if (Check == "B" || Check == "C") {
+            $("#UserNameDropDown").attr('disabled', false);
+        }
+
+        $("#CodeNameDropDown").change(function () {
+            var Check = $("#CodeNameDropDown").val();
+            if (Check == "A" || Check == "U") {
+                $("#UserNameDropDown").val("");
+                $("#UserNameDropDown").attr("disabled", true);
+            }
+            else if (Check == "B" || Check == "C") {
+                $("#UserNameDropDown").val("0001");//預設為第一人
+                $("#UserNameDropDown").attr("disabled", false);
+            }
+        });
+    });
+
+    //內容簡介字數控制
+    function WordsDeal() {
+        var curLength = $("#TextArea").val().length;
+        if (curLength > 1000) {
+            var num = $("#TextArea").val().substr(0, 1000);
+            console.log(num);
+            $("#TextArea").val(num);
+            alert("超過字數限制(1000字)，多出的字將被移除！");
+        }
+    }
+</script>

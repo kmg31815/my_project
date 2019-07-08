@@ -1,0 +1,92 @@
+﻿@model BookMaintenance.Models.Books
+
+@{
+    ViewBag.Title = "InsertBook";
+}
+
+<h2>新增圖書</h2>
+
+@using (Html.BeginForm("InsertBook", "BookMaintenance", FormMethod.Post, new { id = "InsertBookForm" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BookName, htmlAttributes: new { @class = "control-label col-md-2 required" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.BookName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.BookName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BookAuthor, htmlAttributes: new { @class = "control-label col-md-2 required" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.BookAuthor, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.BookAuthor, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BookPublisher, htmlAttributes: new { @class = "control-label col-md-2 required" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.BookPublisher, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.BookPublisher, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BookNote, htmlAttributes: new { @class = "control-label col-md-2 required" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.BookNote, 10, 10, new { @class = "form-control", @id = "TextArea", @onkeyup = "WordsDeal();" })
+                @Html.ValidationMessageFor(model => model.BookNote, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BookBoughtDate, htmlAttributes: new { @class = "control-label col-md-2 required" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.BookBoughtDate, new { @class = "form-control", @type = "Date", @Value = DateTime.Today.ToString("yyyy-MM-dd") })
+                @Html.ValidationMessageFor(model => model.BookBoughtDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BookClassName, htmlAttributes: new { @class = "control-label col-md-2 required" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.BookClassID, (List<SelectListItem>)ViewBag.BookClassNameData, "請選擇", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.BookClassID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="存檔" class="btn" style="background-color: #99b2db; color:#194284" />
+            </div>
+        </div>
+    </div>
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#InsertBookForm").on("submit", function () {
+            return confirm('確定是否新增這筆紀錄?');
+        });
+    });
+
+    //內容簡介字數控制
+    function WordsDeal() {
+        var curLength = $("#TextArea").val().length;
+        if (curLength > 1000) {
+            var num = $("#TextArea").val().substr(0,1000);
+            $("#TextArea").val(num);
+            alert("超過字數限制(1000字)，多出的字將被移除！");
+        }
+    }
+</script>
+
+<div>
+    @Html.ActionLink("返回", "Index")
+</div>
